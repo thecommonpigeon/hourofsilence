@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>defaultsounds/roblox-oof.mp3</file>
+        <file>defaultsounds/minecraft-old-oof.mp3</file>
+        <file>defaultsounds/bruh.mp3</file>
+        <file>defaultsounds/reverb-fart.mp3</file>
+        <file>defaultsounds/vine-boom.mp3</file>
+        <file>defaultsounds/what-the-dog-doin.mp3</file>
+    </qresource>
+</RCC>
