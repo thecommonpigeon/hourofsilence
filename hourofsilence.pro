@@ -23,7 +23,8 @@ DISTFILES += \
     defaultsounds/reverb-fart.mp3 \
     defaultsounds/roblox-oof.mp3 \
     defaultsounds/vine-boom.mp3 \
-    defaultsounds/what-the-dog-doin.mp3
+    defaultsounds/what-the-dog-doin.mp3 \
+    libs/Qt5Network.dll
 
 target.path = $${TARGET}/bin
 libs.path = $${TARGET}/bin
