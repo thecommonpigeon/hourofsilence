@@ -24,9 +24,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>80</y>
+      <y>40</y>
       <width>781</width>
-      <height>511</height>
+      <height>551</height>
      </rect>
     </property>
     <property name="horizontalScrollBarPolicy">
@@ -62,53 +62,6 @@
      <string>Add sound</string>
     </property>
    </widget>
-   <widget class="QLabel" name="labelDefaultMTTH">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>71</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>Default mean time to happen (can be set for individual sounds)</string>
-    </property>
-    <property name="text">
-     <string>Default MTTH</string>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="spinBoxDefaultMTTH">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>40</y>
-      <width>71</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>Default mean time to happen (can be set for individual sounds)</string>
-    </property>
-    <property name="accelerated">
-     <bool>true</bool>
-    </property>
-    <property name="correctionMode">
-     <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-    </property>
-    <property name="suffix">
-     <string> sec</string>
-    </property>
-    <property name="minimum">
-     <number>10</number>
-    </property>
-    <property name="maximum">
-     <number>7200</number>
-    </property>
-    <property name="value">
-     <number>300</number>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButtonStart">
     <property name="geometry">
      <rect>
@@ -141,11 +94,11 @@
      <string>Stop</string>
     </property>
    </widget>
-   <widget class="QLabel" name="labelDefaultMTTH_3">
+   <widget class="QLabel" name="labelStatus">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>40</y>
+      <x>440</x>
+      <y>10</y>
       <width>91</width>
       <height>23</height>
      </rect>
@@ -153,40 +106,6 @@
     <property name="text">
      <string>Status: Stopped</string>
     </property>
-   </widget>
-   <widget class="QComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>10</y>
-      <width>161</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="currentIndex">
-     <number>1</number>
-    </property>
-    <item>
-     <property name="text">
-      <string>Disallow sound overlap</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Disallow overlap with itself</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Allow all overlap</string>
-     </property>
-    </item>
    </widget>
   </widget>
  </widget>

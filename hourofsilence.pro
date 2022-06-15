@@ -17,7 +17,7 @@ FORMS += \
     mainwindow.ui
 
 DISTFILES += \
-    defaultsounds/amongus-scream.mp3 \
+    defaultsounds/amongus-scream(LOUD).mp3 \
     defaultsounds/reverb-fart.mp3 \
     defaultsounds/roblox-oof.mp3 \
     defaultsounds/vine-boom.mp3 \

@@ -20,8 +20,12 @@ public:
 private:
     Ui::MainWindow *ui;
     QList<SoundItem*> soundList;
+    bool isRunning = 0;
 
 public slots:
     void openSoundFile();
+    void setVolumeSliderTooltip(int volume);
+    void startPressedSlot();    //these 2 could be one but i'm lazy
+    void stopPressedSlot();
 };
 #endif // MAINWINDOW_H
