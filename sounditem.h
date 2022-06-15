@@ -10,15 +10,18 @@ class SoundItem : public QObject
     Q_OBJECT
 public:
     explicit SoundItem(QObject *parent = nullptr, QUrl path = QUrl(""));
+    QString getName();
+    bool malformed = false;
 
 signals:
 
 public slots:
+    void play();
 
 private:
     QMediaPlayer player;
-    QString name;
     QUrl path;
+    QString name;
     QTimer timer;
 };
 

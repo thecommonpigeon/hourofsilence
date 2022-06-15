@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtWidgets>
+#include "sounditem.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +19,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QList<SoundItem*> soundList;
+
+public slots:
+    void openSoundFile();
 };
 #endif // MAINWINDOW_H

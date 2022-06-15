@@ -18,13 +18,19 @@ FORMS += \
 
 DISTFILES += \
     defaultsounds/amongus-scream.mp3 \
-    defaultsounds/bruh.mp3 \
-    defaultsounds/minecraft-old-oof.mp3 \
     defaultsounds/reverb-fart.mp3 \
     defaultsounds/roblox-oof.mp3 \
     defaultsounds/vine-boom.mp3 \
     defaultsounds/what-the-dog-doin.mp3 \
-    libs/Qt5Network.dll
+    libs/libgcc_s_seh-1.dll \
+    libs/libstdc++-6.dll \
+    libs/libwinpthread.dll \
+    libs/Qt5Core.dll \
+    libs/Qt5Gui.dll \
+    libs/Qt5Multimedia.dll \
+    libs/Qt5Network.dll \
+    libs/Qt5Widgets.dll \
+    libs/platforms/qwindows.dll
 
 target.path = $${TARGET}/bin
 libs.path = $${TARGET}/bin

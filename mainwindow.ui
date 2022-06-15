@@ -20,7 +20,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="soundList">
+   <widget class="QTableWidget" name="soundListWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -49,7 +49,7 @@
      <string>Stop currently playing</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonAddCustom">
+   <widget class="QPushButton" name="pushButtonAdd">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -141,26 +141,10 @@
      <string>Stop</string>
     </property>
    </widget>
-   <widget class="QLabel" name="labelDefaultMTTH_2">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>40</y>
-      <width>71</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>Volume of the entire application</string>
-    </property>
-    <property name="text">
-     <string>Global volume</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="labelDefaultMTTH_3">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>180</x>
       <y>40</y>
       <width>91</width>
       <height>23</height>
@@ -168,34 +152,6 @@
     </property>
     <property name="text">
      <string>Status: Stopped</string>
-    </property>
-   </widget>
-   <widget class="QSlider" name="horizontalSlider">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>40</y>
-      <width>160</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>100%</string>
-    </property>
-    <property name="maximum">
-     <number>20</number>
-    </property>
-    <property name="value">
-     <number>20</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <property name="tickPosition">
-     <enum>QSlider::TicksBothSides</enum>
-    </property>
-    <property name="tickInterval">
-     <number>2</number>
     </property>
    </widget>
    <widget class="QComboBox" name="comboBox">
