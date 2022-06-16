@@ -30,12 +30,18 @@ DISTFILES += \
     libs/Qt5Multimedia.dll \
     libs/Qt5Network.dll \
     libs/Qt5Widgets.dll \
-    libs/platforms/qwindows.dll
+    libs/platforms/qwindows.dll \
+    readme.txt
 
-target.path = $${TARGET}/bin
-libs.path = $${TARGET}/bin
+DEPENDPATH = $${TARGET}/libs
+
+target.path = $${TARGET}
+libs.path = $${TARGET}
 sounds.path = $${TARGET}/sounds
+readme.path = $${TARGET}
+
 sounds.files = defaultsounds/*
 libs.files = libs/*
+readme.files = readme.txt
 
-INSTALLS+= target sounds libs
+INSTALLS+= target sounds libs readme
