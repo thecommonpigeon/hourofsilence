@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->soundListWidget->setColumnWidth(2, qRound(ui->soundListWidget->width()*0.1));
     ui->soundListWidget->setColumnWidth(3, qRound(ui->soundListWidget->width()*0.25));
     ui->soundListWidget->setColumnWidth(4, qRound(ui->soundListWidget->width()*0.2));
-    ui->soundListWidget->setColumnWidth(5, qRound(ui->soundListWidget->width()*0.1));
+    ui->soundListWidget->setColumnWidth(5, qRound(ui->soundListWidget->width()*0.08));
     ui->soundListWidget->horizontalHeader()->setVisible(0);
     connect(ui->pushButtonAdd, SIGNAL(clicked()), this, SLOT(openSoundFile()));
     connect(ui->pushButtonStart, SIGNAL(clicked()), this, SLOT(startPressedSlot()));
@@ -83,8 +83,24 @@ void MainWindow::openSoundFile(){
 
             QPushButton *del = new QPushButton("Delete");                                   //delete button
             del->setObjectName(QString("Delete%1").arg(i));                                 //sender->objectName() is used in delete slot
+            connect(del, SIGNAL(clicked()), this, SLOT(deleteSound()));
             ui->soundListWidget->setCellWidget(i, 5, del);
         }
+    }
+}
+
+void MainWindow::deleteSound(){
+    int i = static_cast<QPushButton*>(sender())->objectName().remove("Delete").toInt();
+    ui->soundListWidget->item(i, 0)->~QTableWidgetItem();
+    int j;
+    for(j = 1; j < 6; j++){
+        ui->soundListWidget->cellWidget(i, j)->~QWidget();
+    }
+    ui->soundListWidget->removeRow(i);
+    soundList[i]->~SoundItem();
+    soundList.removeAt(i);
+    for(i = 0; i < soundList.size(); i++){
+        soundList[i]->index = i;
     }
 }
 

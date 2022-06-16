@@ -24,6 +24,7 @@ private:
 
 public slots:
     void openSoundFile();
+    void deleteSound();
     void setVolumeSliderTooltip(int volume);
     void startPressedSlot();    //these 2 could be one but i'm lazy
     void stopPressedSlot();
