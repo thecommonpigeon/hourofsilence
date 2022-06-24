@@ -71,7 +71,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Add sound</string>
+     <string>Add sounds</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonStart">
