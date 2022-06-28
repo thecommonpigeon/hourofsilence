@@ -54,7 +54,7 @@ void MainWindow::openSoundFile(){
                     ui->soundListWidget->item(i, 0)->setToolTip("Editable name of the sound");
 
                     QPushButton *playNow = new QPushButton("Play now");                             //play now button
-                    playNow->setToolTip("Play this sound with set volume");
+                    playNow->setToolTip("Play this sound once with set volume");
                     playNow->setObjectName("PlayNowButton");
                     connect(playNow, SIGNAL(clicked()), newItem, SLOT(play()));
                     ui->soundListWidget->setCellWidget(i, 1, playNow);

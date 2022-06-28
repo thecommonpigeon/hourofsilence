@@ -33,8 +33,8 @@ void SoundItem::setMute(bool mute){
 
 void SoundItem::setVolume(int sliderValue){
     qreal linearVolume = QAudio::convertVolume(sliderValue / double(100.0),
-                                                     QAudio::LogarithmicVolumeScale,
-                                                     QAudio::LinearVolumeScale);
+                                               QAudio::LogarithmicVolumeScale,
+                                               QAudio::LinearVolumeScale);
     player.setVolume(qRound(linearVolume * 100));
 }
 

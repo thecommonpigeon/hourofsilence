@@ -55,7 +55,7 @@
      </rect>
     </property>
     <property name="toolTip">
-     <string>Mute sounds playing right now</string>
+     <string>Silence everything playing right now</string>
     </property>
     <property name="text">
      <string>Stop currently playing</string>
@@ -69,6 +69,9 @@
       <width>71</width>
       <height>23</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Load sound files</string>
     </property>
     <property name="text">
      <string>Add sounds</string>
@@ -84,7 +87,7 @@
      </rect>
     </property>
     <property name="toolTip">
-     <string>Start randomly playing enabled sounds</string>
+     <string>Start playing enabled sounds with random intervals</string>
     </property>
     <property name="text">
      <string>Start</string>
