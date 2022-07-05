@@ -18,9 +18,14 @@ FORMS += \
 
 DISTFILES += \
     defaultsounds/amongus-scream(LOUD).mp3 \
+    defaultsounds/fnaf-hallway.mp3 \
+    defaultsounds/minecraft-cave-ambience.mp3 \
     defaultsounds/reverb-fart.mp3 \
     defaultsounds/roblox-oof.mp3 \
+    defaultsounds/squeaky-toy.mp3 \
+    defaultsounds/stereo-knock.mp3 \
     defaultsounds/vine-boom.mp3 \
+    defaultsounds/vine-omg.mp3 \
     defaultsounds/what-the-dog-doin.mp3 \
     libs/libgcc_s_seh-1.dll \
     libs/libstdc++-6.dll \
