@@ -107,6 +107,7 @@ void MainWindow::openSoundFile(){
         soundList.removeAt(i);
         for(i = 0; i < soundList.size(); i++){
             soundList[i]->index = i;
+            ui->soundListWidget->cellWidget(i, 5)->setObjectName(QString("Delete%1").arg(i));
         }
     }
 
