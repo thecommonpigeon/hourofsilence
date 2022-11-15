@@ -95,33 +95,33 @@ void MainWindow::openSoundFile(){
     }
 }
 
-    void MainWindow::deleteSound(){
-        int i = static_cast<QPushButton*>(sender())->objectName().remove("Delete").toInt();
-        ui->soundListWidget->item(i, 0)->~QTableWidgetItem();
-        int j;
-        for(j = 1; j < 6; j++){
-            ui->soundListWidget->cellWidget(i, j)->~QWidget();
-        }
-        ui->soundListWidget->removeRow(i);
-        soundList[i]->~SoundItem();
-        soundList.removeAt(i);
-        for(i = 0; i < soundList.size(); i++){
-            soundList[i]->index = i;
-            ui->soundListWidget->cellWidget(i, 5)->setObjectName(QString("Delete%1").arg(i));
-        }
+void MainWindow::deleteSound(){
+    int i = reinterpret_cast<QPushButton*>(sender())->objectName().remove("Delete").toInt();
+    ui->soundListWidget->item(i, 0)->~QTableWidgetItem();
+    int j;
+    for(j = 1; j < 6; j++){
+        ui->soundListWidget->cellWidget(i, j)->~QWidget();
     }
+    ui->soundListWidget->removeRow(i);
+    soundList[i]->~SoundItem();
+    soundList.removeAt(i);
+    for(i = 0; i < soundList.size(); i++){
+        soundList[i]->index = i;
+        ui->soundListWidget->cellWidget(i, 5)->setObjectName(QString("Delete%1").arg(i));
+    }
+}
 
-    void MainWindow::setVolumeSliderTooltip(int volume){
-        QSlider *slider = reinterpret_cast<QSlider*>(sender());
-        slider->setToolTip(QString("Volume: %1%").arg(volume));
-    }
+void MainWindow::setVolumeSliderTooltip(int volume){
+    QSlider *slider = reinterpret_cast<QSlider*>(sender());
+    slider->setToolTip(QString("Volume: %1%").arg(volume));
+}
 
-    void MainWindow::startPressedSlot(){
-        ui->labelStatus->setText("Status: Running");
-        isRunning = 1;
-    }
+void MainWindow::startPressedSlot(){
+    ui->labelStatus->setText("Status: Running");
+    isRunning = 1;
+}
 
-    void MainWindow::stopPressedSlot(){
-        ui->labelStatus->setText("Status: Stopped");
-        isRunning = 0;
-    }
+void MainWindow::stopPressedSlot(){
+    ui->labelStatus->setText("Status: Stopped");
+    isRunning = 0;
+}
