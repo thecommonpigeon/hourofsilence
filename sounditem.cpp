@@ -40,8 +40,10 @@ void SoundItem::setVolume(int sliderValue){
 
 void SoundItem::setMTTH(int value){
     mtth = value;
-    stop();
-    startTimer();
+    if(timer.isActive()){
+        stop();
+        startTimer();
+    }
 }
 
 void SoundItem::startTimer(){
